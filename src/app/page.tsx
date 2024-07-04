@@ -1,112 +1,248 @@
 import Image from "next/image";
+import One from "../../public/1.svg";
+import Two from "../../public/2.svg";
+import Three from "../../public/3.svg";
+import Four from "../../public/4.svg";
+import Five from "../../public/5.svg";
+import Six from "../../public/6.svg";
+import Seven from "../../public/7.svg";
+import Eight from "../../public/8.svg";
+import Nine from "../../public/9.svg";
+import Ten from "../../public/10.svg";
+import Eleven from "../../public/11.svg";
+import Twelve from "../../public/12.svg";
+
+const cards = [
+  {
+    image: "",
+    title: "Break down silos between marketing, design, and development",
+    description:
+      "Give your marketing and design team greater control to add, edit, and update content and free your engineering team to focus on bigger challenges.",
+  },
+  {
+    image: "",
+    title: "Backed by enterprise-grade security",
+    description:
+      "Webflow Enterprise is backed by SOC-2 certification and comes with advanced security features like single sign on, custom security headers, custom SSL certificates, and much more.",
+  },
+  {
+    image: "",
+    title: "We’ll partner with you to ensure success",
+    description:
+      "Our sales and solutions team is here to help onboard your team, provide technical consulting on critical integrations, and connect you to Webflow Experts who can help you get up and running.",
+  },
+  {
+    image: "",
+    title: "Harness the power of code — without writing it",
+    description:
+      "Webflow’s visual development tool means you can build any layout for any page, visually, without having to write a single line of code.",
+  },
+  {
+    image: "",
+    title: "Publish directly to world-class hosting",
+    description:
+      "Push your website changes live in a single click to a scalable, secure, and globally-distributed hosting network.",
+  },
+  {
+    image: "",
+    title: "World-class performance",
+    description:
+      "Fast page loads powered by Fastly CDN and enterprise-level uptime SLAs make for seamless hosting.",
+  },
+];
+
+const forms = [
+  {
+    name: "First Name",
+    type: "text",
+    placeholder: "Enter your first name",
+  },
+  {
+    name: "Last Name",
+    type: "text",
+    placeholder: "Enter your last name",
+  },
+  {
+    name: "Business Email",
+    type: "text",
+    placeholder: "Enter your email",
+  },
+  {
+    name: "Phone Number",
+    type: "text",
+    placeholder: "Enter phone number",
+  },
+  {
+    name: "Company",
+    type: "text",
+    placeholder: "Where do you work?",
+  },
+];
+
+const images = [
+  One,
+  Two,
+  Three,
+  Four,
+  Five,
+  Six,
+  Seven,
+  Eight,
+  Nine,
+  Ten,
+  Eleven,
+  Twelve,
+];
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex flex-col w-full text-black">
+      <div className="flex w-full bg-white items-center justify-center">
+        <div className="w-1/2 p-20">
+          <h1 className="text-8xl font-semibold mb-5">
+            Contact our sales team
+          </h1>
+          <p className="text-xl">
+            Build better websites — faster — with the power of Webflow. Backed
+            by advanced security, custom traffic scaling, guaranteed uptime, and
+            much more.
+          </p>
+          <div className="grid grid-cols-3 gap-20 my-10">
+            {images.map((item, index) => (
+              <Image key={index} src={item} alt="" />
+            ))}
+          </div>
+        </div>
+        <div className="w-1/2 flex flex-col p-20">
+          <div className="grid grid-cols-2 gap-10">
+            {forms.map((item, index) => (
+              <div key={index} className="border p-4">
+                <h1 className="uppercase text-sm"> {item.name}</h1>
+                <input
+                  type={item.type}
+                  className="bg-transparent"
+                  placeholder={item.placeholder}
+                />
+              </div>
+            ))}
+            <div className="border p-4">
+              <h1 className="uppercase text-sm">Company Size</h1>
+              <select
+                name=""
+                id=""
+                className="bg-transparent w-full p-2 border-none !important appearance-none !important"
+              >
+                <option value="">1-10</option>
+                <option value="">11-50</option>
+                <option value="">51-200</option>
+                <option value="">201-500</option>
+                <option value="">500+</option>
+              </select>
+            </div>
+            <div className="border p-4">
+              <h1 className="uppercase text-sm">Title</h1>
+              <input
+                type="text"
+                className="bg-transparent"
+                placeholder="What is your job title?"
+              />
+            </div>
+            <div className="border p-4">
+              <h1 className="uppercase text-sm">Country</h1>
+              <select
+                name=""
+                id=""
+                className="bg-transparent w-full p-2 border-none !important appearance-none !important"
+              >
+                <option value="">1-10</option>
+                <option value="">11-50</option>
+                <option value="">51-200</option>
+                <option value="">201-500</option>
+                <option value="">500+</option>
+              </select>
+            </div>
+            <div className="border p-4">
+              <h1 className="uppercase text-sm">
+                How can we best support you?
+              </h1>
+              <select
+                name=""
+                id=""
+                className="bg-transparent w-full p-2 border-none !important appearance-none !important"
+              >
+                <option value="">1-10</option>
+                <option value="">11-50</option>
+                <option value="">51-200</option>
+                <option value="">201-500</option>
+                <option value="">500+</option>
+              </select>
+            </div>
+          </div>
+          <button className="bg-blue-500 w-1/4 rounded-md text-white font-semibold p-3 mt-5">
+            Contact sales
+          </button>
+          <div className="bg-gray-700 h-[0.5px] w-full my-10"></div>
+          <p>
+            By submitting this form, you agree to Webflow’s Terms of Service and
+            Privacy Policy.
+          </p>
+          <div className="bg-gray-500 h-[0.5px] w-full my-5"></div>
+          <p>Looking for help with the product? Go to the help center</p>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="h-screen bg-white flex items-center justify-center">
+        <div className="bg-stone-100 container flex flex-col">
+          <div className="flex p-10">
+            <div className="w-1/2">
+              <Image
+                src="/images/illustration-1.png"
+                width={100}
+                height={100}
+                alt=""
+              />
+              <div>
+                <h1 className="text-9xl font-bold">3x</h1>
+                <p className="text-2xl font-semibold">faster time to launch</p>
+              </div>
+            </div>
+            <div className="w-1/2 flex flex-col justify-between">
+              <h1 className="text-2xl">
+                “Our design and development teams are much more integrated
+                during the build process. Designers have more autonomy, and
+                engineers can focus on the most impactful work — allowing us to
+                deliver new web pages faster.”
+              </h1>
+              <div className="flex items-center space-x-3">
+                <Image
+                  src="/images/avatar-1.png"
+                  width={50}
+                  height={50}
+                  alt=""
+                />
+                <div>
+                  <h1 className="font-semibold">Daniel Dawson</h1>
+                  <p>Senior Manager of Digital Properties, NCR</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-stone-200 p-5">
+            <h1 className="text-center text-lg">Read customer story </h1>
+          </div>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="h-0.5 bg-gray-100 w-full"></div>
+      <div className="bg-white flex flex-col p-20 justify-center ">
+        <h1 className="text-8xl font-semibold mb-10">Why choose Webflow?</h1>
+        <div className="grid grid-cols-3 gap-20">
+          {cards.map((item, index) => (
+            <div key={index} className="">
+              <Image src="/images/icon-1.png" width={50} height={50} alt="" />
+              <h1 className="text-2xl font-semibold mb-8">{item.title}</h1>
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
