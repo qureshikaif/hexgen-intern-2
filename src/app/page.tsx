@@ -115,7 +115,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-1/2 flex flex-col p-20">
-          <div className="grid grid-cols-2 gap-10">
+          <div className="grid grid-cols-2 gap-5">
             {forms.map((item, index) => (
               <div key={index} className="border p-4">
                 <h1 className="uppercase text-sm"> {item.name}</h1>
@@ -131,7 +131,7 @@ export default function Home() {
               <select
                 name=""
                 id=""
-                className="bg-transparent w-full p-2 border-none !important appearance-none !important"
+                className="bg-transparent w-full border-none !important appearance-none !important"
               >
                 <option value="">1-10</option>
                 <option value="">11-50</option>
@@ -153,7 +153,7 @@ export default function Home() {
               <select
                 name=""
                 id=""
-                className="bg-transparent w-full p-2 border-none !important appearance-none !important"
+                className="bg-transparent w-full border-none !important appearance-none !important"
               >
                 <option value="">United States</option>
                 <option value="">Canada</option>
@@ -169,7 +169,7 @@ export default function Home() {
               <select
                 name=""
                 id=""
-                className="bg-transparent w-full p-2 border-none !important appearance-none !important"
+                className="bg-transparent w-full border-none !important appearance-none !important"
               >
                 <option value="">1-10</option>
                 <option value="">11-50</option>
