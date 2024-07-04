@@ -224,7 +224,9 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-stone-200 p-5">
-            <h1 className="text-center text-lg">Read customer story </h1>
+            <h1 className="text-center text-lg font-semibold">
+              Read customer story{" "}
+            </h1>
           </div>
         </div>
       </div>
