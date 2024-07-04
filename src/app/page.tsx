@@ -11,6 +11,7 @@ import Nine from "../../public/9.svg";
 import Ten from "../../public/10.svg";
 import Eleven from "../../public/11.svg";
 import Twelve from "../../public/12.svg";
+import Avatar from "../../public/avatar.jpg";
 
 const cards = [
   {
@@ -154,11 +155,11 @@ export default function Home() {
                 id=""
                 className="bg-transparent w-full p-2 border-none !important appearance-none !important"
               >
-                <option value="">1-10</option>
-                <option value="">11-50</option>
-                <option value="">51-200</option>
-                <option value="">201-500</option>
-                <option value="">500+</option>
+                <option value="">United States</option>
+                <option value="">Canada</option>
+                <option value="">Mexico</option>
+                <option value="">Brazil</option>
+                <option value="">Argentina</option>
               </select>
             </div>
             <div className="border p-4">
@@ -193,19 +194,14 @@ export default function Home() {
       <div className="h-screen bg-white flex items-center justify-center">
         <div className="bg-stone-100 container flex flex-col">
           <div className="flex p-10">
-            <div className="w-1/2">
-              <Image
-                src="/images/illustration-1.png"
-                width={100}
-                height={100}
-                alt=""
-              />
+            <div className="w-1/2 space-y-24 ">
+              <Image src={Ten} width={100} height={100} alt="" />
               <div>
                 <h1 className="text-9xl font-bold">3x</h1>
                 <p className="text-2xl font-semibold">faster time to launch</p>
               </div>
             </div>
-            <div className="w-1/2 flex flex-col justify-between">
+            <div className="w-1/2 flex flex-col justify-between space-y-20">
               <h1 className="text-2xl">
                 “Our design and development teams are much more integrated
                 during the build process. Designers have more autonomy, and
@@ -214,10 +210,11 @@ export default function Home() {
               </h1>
               <div className="flex items-center space-x-3">
                 <Image
-                  src="/images/avatar-1.png"
+                  src={Avatar}
                   width={50}
                   height={50}
                   alt=""
+                  className="rounded-full"
                 />
                 <div>
                   <h1 className="font-semibold">Daniel Dawson</h1>
